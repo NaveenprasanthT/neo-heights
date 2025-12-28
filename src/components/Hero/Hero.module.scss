@@ -1,0 +1,220 @@
+.hero {
+  margin: 120px 0 0;
+  padding: 0 7%;
+
+  font-family: var(--font-futura); // Only for header
+
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  color: #fff; // Always white text on hero background usually
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); // Dark overlay for text readability
+  z-index: 1;
+  
+  video {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  [data-theme='light'] & {
+    // In light mode, maybe we want it lighter or keep it dark for contrast with white text?
+    // Screenshot shows dark background regardless, so we might force dark mode styles for Hero or keep it consistent.
+    // Assuming the hero image is always dark/foggy.
+  }
+}
+
+.container {
+  padding: 0 2% 0;
+  // position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  max-width: 800px;
+  margin-top: 60px; // Offset for fixed header
+}
+
+.title {
+  font-size: 3.8rem;
+  font-family: var(--font-futura);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
+  font-family: var(--font-futura);
+  line-height: 1.4;
+  margin-bottom: 40px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin: 25px 0 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btnPrimary {
+  background: var(--primary-orange);
+  color: #fff;
+  border: 1px solid var(--primary-orange);
+
+  &:hover {
+    background: var(--primary-orange-hover);
+    border-color: var(--primary-orange-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.btnSecondary {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+}
+
+.verticalsWidget {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  min-width: 250px;
+
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile or adjust
+  }
+}
+
+.widgetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  
+  .closeIcon {
+    cursor: pointer;
+    opacity: 0.7;
+    &:hover { opacity: 1; }
+  }
+}
+
+.verticalsList {
+  display: flex;
+  gap: 10px;
+}
+
+.verticalItem {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  
+  .verticalItemImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.themeHint {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background: rgba(50, 50, 50, 0.9);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.5s ease;
+
+  .infoIcon {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .closeHint {
+    cursor: pointer;
+    opacity: 0.7;
+    margin-left: 8px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

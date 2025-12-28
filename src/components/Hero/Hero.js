@@ -1,0 +1,106 @@
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, X } from 'lucide-react';
+import styles from './Hero.module.scss';
+
+import NeoLogo from '@/assets/images/verticals/neo_studio.png'
+import Image from 'next/image';
+
+const Hero = () => {
+    return (
+        <section className={styles.hero}>
+            <div className={styles.overlay}>
+                <video
+                    src="/videos/intro.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                    style={{ width: "100%" }}
+                />
+            </div>
+            <div className={`container ${styles.container}`}>
+                <div className={styles.content}>
+                    <h1 className={styles.title}>
+                        We craft buildings & infrastructure
+                    </h1>
+                    <p className={styles.description}>
+                        From initial design support to final delivery, our complete business model ensures excellence at every stage of the project lifecycle.
+                    </p>
+                    <div className={styles.ctaGroup}>
+                        <Link href="/start-project" className={`${styles.btn} ${styles.btnPrimary}`}>
+                            Start Your Project <ArrowRight size={18} />
+                        </Link>
+                        <Link href="/projects" className={`${styles.btn} ${styles.btnSecondary}`}>
+                            View Projects
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.verticalsWidget}>
+                <div className={styles.widgetHeader}>
+                    <span>Other Verticals</span>
+                    <X size={14} className={styles.closeIcon} />
+                </div>
+                <div className={styles.verticalsList}>
+                    <div className={styles.verticalItem}>
+                        <Image
+                            src={NeoLogo}
+                            alt=""
+                            width={300}
+                            heigth={300}
+                            className={styles.verticalItemImage}
+                        />
+                    </div>
+                    <div className={styles.verticalItem}>
+                        <Image
+                            src={NeoLogo}
+                            alt=""
+                            width={300}
+                            heigth={300}
+                            className={styles.verticalItemImage}
+                        />
+                    </div>
+                    <div className={styles.verticalItem}>
+                        <Image
+                            src={NeoLogo}
+                            alt=""
+                            width={300}
+                            heigth={300}
+                            className={styles.verticalItemImage}
+                        />
+                    </div>
+                    <div className={styles.verticalItem}>
+                        <Image
+                            src={NeoLogo}
+                            alt=""
+                            width={300}
+                            heigth={300}
+                            className={styles.verticalItemImage}
+                        />
+                    </div>
+                    <div className={styles.verticalItem}>
+                        <Image
+                            src={NeoLogo}
+                            alt=""
+                            width={300}
+                            heigth={300}
+                            className={styles.verticalItemImage}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            {/* Theme toggle hint tooltip mockup */}
+            {/* <div className={styles.themeHint}>
+                    <span className={styles.infoIcon}>i</span>
+                    Toggle to switch between dark or light mode.
+                    <X size={12} className={styles.closeHint} />
+                </div> */}
+        </section>
+    );
+};
+
+export default Hero;
