@@ -23,6 +23,11 @@
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 768px) {
+    width: 280px;
+    height: 340px;
+  }
 }
 
 .content {
@@ -32,6 +37,10 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .defaultContent {
@@ -49,11 +58,21 @@
     // margin-bottom: 12px;
     color: #fff;
   }
-  
+
   .description {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--grey-color);
+  }
+
+  @media (max-width: 768px) {
+    .stat {
+      font-size: 3rem;
+    }
+
+    .description {
+      font-size: 0.85rem;
+    }
   }
 }
 
@@ -72,14 +91,24 @@
     text-transform: uppercase;
     margin-bottom: 12px;
   }
-  
+
   .subItems {
     list-style: none;
-    
+
     li {
       padding: 0 0 3px;
       font-size: 0.75rem;
       // margin-bottom: 4px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .subItems {
+
+      li {
+        padding: 0 0 1px;
+        font-size: 0.7rem;
+      }
     }
   }
 }
@@ -97,7 +126,7 @@
   align-items: flex-start;
   gap: 20px;
   opacity: 0;
-  
+
   transform: translateY(20px);
   transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
   pointer-events: none; // Let clicks pass through if needed, or remove if button is clickable

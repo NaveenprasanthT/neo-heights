@@ -46,13 +46,13 @@ const Header = () => {
                 </nav>
 
                 <div className={styles.actions}>
-                    <button
+                    {/* <button
                         className={styles.themeToggle}
                         onClick={toggleTheme}
                         aria-label="Toggle theme"
                     >
                         {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-                    </button>
+                    </button> */}
                     <button
                         className={styles.mobileMenuToggle}
                         onClick={toggleMenu}

@@ -18,7 +18,7 @@
     }
 
     @media (max-width: 768px) {
-        height: 500px;
+        height: 425px;
     }
 }
 
@@ -58,7 +58,7 @@
     animation: slideUp 1s ease-out forwards;
 
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.55rem;
     }
 }
 
@@ -82,42 +82,69 @@
     &:hover {
         transform: translateY(-2px);
     }
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+        padding: 8px 20px;
+        border-radius: 8px;
+    }
 }
 
 .stats {
     position: absolute;
-    bottom: 3rem; // Positioned relative to container or section? Screenshot shows it at bottom right.
+    bottom: 3rem;
     right: 5rem;
     display: flex;
     gap: 60px;
     text-align: left;
     padding-bottom: 20px;
 
-    @media (max-width: 768px) {
-        position: relative;
+    .statItem {
+        display: flex;
         flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        margin-top: 40px;
-        padding-bottom: 0;
     }
-}
 
-.statItem {
-    display: flex;
-    flex-direction: column;
-}
+    .statNumber {
+        font-size: 3.9rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
 
-.statNumber {
-    font-size: 3.9rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 8px;
-}
+    .statLabel {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
 
-.statLabel {
-    font-size: 1rem;
-    line-height: 1.4;
+    @media (max-width: 768px) {
+        position: absolute;
+        bottom: 0%;
+        left: 45%;
+        transform: translate(-50%, -0%);
+
+        display: flex;
+        gap: 10px;
+        text-align: left;
+        padding-bottom: 20px;
+
+        .statItem {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .statNumber {
+            padding: 0 20px 0 0;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .statLabel {
+            font-size: 0.5rem;
+            line-height: 1.4;
+        }
+    }
 }
 
 @keyframes slideUp {

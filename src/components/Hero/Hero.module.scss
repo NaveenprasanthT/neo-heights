@@ -12,6 +12,12 @@
   display: flex;
   align-items: center;
   color: #fff; // Always white text on hero background usually
+
+  @media (max-width: 768px) {
+    margin: 50px 0 0;
+
+    height: 90vh;
+  }
 }
 
 .overlay {
@@ -22,7 +28,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.4); // Dark overlay for text readability
   z-index: 1;
-  
+
   video {
     object-fit: cover;
     object-position: center;
@@ -44,6 +50,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+
+    padding: 15% 0 0;
+  }
 }
 
 .content {
@@ -57,10 +69,13 @@
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
+    line-height: 0.9;
+
+    margin-bottom: 15px;
   }
 }
 
@@ -71,6 +86,13 @@
   margin-bottom: 40px;
   max-width: 600px;
   opacity: 0.9;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+  }
 }
 
 .ctaGroup {
@@ -91,6 +113,14 @@
   font-weight: 400;
   transition: all 0.3s ease;
   font-size: 1rem;
+
+  @media (max-width: 768px) {
+    margin: 0;
+
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
 }
 
 .btnPrimary {
@@ -130,7 +160,7 @@
   min-width: 250px;
 
   @media (max-width: 768px) {
-    display: none; // Hide on mobile or adjust
+    min-width: 200px;
   }
 }
 
@@ -141,23 +171,32 @@
   margin-bottom: 12px;
   font-size: 0.9rem;
   color: #fff;
-  
+
   .closeIcon {
     cursor: pointer;
     opacity: 0.7;
-    &:hover { opacity: 1; }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 .verticalsList {
   display: flex;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    gap: 0px;
+  }
 }
 
 .verticalItem {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +204,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s;
-  
+
   .verticalItemImage {
     width: 100%;
     height: 100%;
@@ -174,6 +213,14 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    margin-left: -10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
@@ -189,7 +236,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.5s ease;
 
   .infoIcon {
@@ -215,6 +262,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

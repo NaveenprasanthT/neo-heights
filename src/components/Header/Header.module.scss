@@ -17,16 +17,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    height: 75px;
+  }
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  
+
   .logoIcon {
     width: 107px;
     height: 75px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 500px) {
+    .logoIcon {
+      width: 80px;
+      height: 40px;
+    }
   }
 
 }
@@ -41,7 +53,7 @@
     background: var(--background);
     padding: 80px 20px;
     transition: right 0.3s ease;
-    
+
     &.mobileOpen {
       right: 0;
     }

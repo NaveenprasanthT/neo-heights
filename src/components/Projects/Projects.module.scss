@@ -2,6 +2,10 @@
   padding: 80px 5%;
   background-color: #111;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 12% 6%;
+  }
 }
 
 .filtersWrapper {
@@ -9,6 +13,10 @@
   flex-direction: column;
   gap: 16px;
   margin-top: 24px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .statusFilters {
@@ -72,10 +80,16 @@
   }
 }
 
-.span1 { grid-column: span 1; }
-.span2 { 
-    grid-column: span 2; 
-    @media (max-width: 768px) { grid-column: span 1; }
+.span1 {
+  grid-column: span 1;
+}
+
+.span2 {
+  grid-column: span 2;
+
+  @media (max-width: 768px) {
+    grid-column: span 1;
+  }
 }
 
 .projectCard {
@@ -84,7 +98,7 @@
   border-radius: 12px;
   overflow: hidden;
   background: #1b1b1b;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 
   .projectImage {
     width: 100%;
@@ -103,24 +117,45 @@
     left: 0;
     width: 100%;
     padding: 18px 25px 10px;
-    
+
     background: #3F3F3F4D;
     backdrop-filter: blur(8.600000381469727px);
     border: 1px solid #FFFFFF1A;
 
     display: flex;
     justify-content: space-between;
-    
+
     h3 {
       font-size: 1.1rem;
       margin-bottom: 4px;
       font-weight: 600;
     }
-    
+
     span {
       font-size: 0.8rem;
       color: #aaa;
       text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 400px;
+
+    .overlay {
+      padding: 20px 18px 15px;
+
+      flex-direction: column;
+      gap: 5px;
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      span {
+        font-size: 0.7rem;
+      }
     }
   }
 }
@@ -133,58 +168,58 @@
   flex-direction: column;
   justify-content: space-between;
   height: 300px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 
   &.darkTextCard {
-      background: #0d0d0d;
-      border: 1px solid #222;
+    background: #0d0d0d;
+    border: 1px solid #222;
   }
 }
 
 .textCardContent {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .textHeader {
-    margin-bottom: 20px;
-    
-    h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
 }
 
 .statusBadge {
-    background: #262626;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    color: #aaa;
-    text-transform: uppercase;
+  background: #262626;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: #aaa;
+  text-transform: uppercase;
 }
 
 .viewMoreBtn {
-    margin-top: auto;
-    background: transparent;
-    border: none;
-    color: var(--primary-orange);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    padding: 0;
-    
-    &:hover {
-        gap: 10px;
-    }
+  margin-top: auto;
+  background: transparent;
+  border: none;
+  color: var(--primary-orange);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    gap: 10px;
+  }
 }
 
 .finalCardText {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #ccc;
-    margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
 }

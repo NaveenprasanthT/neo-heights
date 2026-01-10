@@ -3,6 +3,10 @@
   padding: 100px 0;
   background-color: #0a0a0a; // Match dark theme
   overflow: hidden; // Hide scrollbar if content overflows viewport width
+
+  @media (max-width: 768px) {
+    padding: 12% 6%;
+  }
 }
 
 .absoluteBgColor {

@@ -17,7 +17,7 @@ const Hero = () => {
                     loop
                     playsInline
                     controls={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: '100%' }}
                 />
             </div>
             <div className={`container ${styles.container}`}>
