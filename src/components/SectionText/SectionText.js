@@ -21,9 +21,9 @@ const SectionText = ({
       <div className={styles.headerGroup}>
         <div className={styles.textGroup}>
             {smallTitle && <h4 className={styles.smallTitle}>{smallTitle}</h4>}
-            {title && <h2 className={styles.title}>{title}</h2>}
+            {title && <h2 className={styles.title} style={{ maxWidth: maxWidth && maxWidth}}>{title}</h2>}
             {description && <p className={styles.description}>{description}</p>}
-        </div>
+        </div> 
         
         {buttonLabel && (
             <button className={`${styles.ctaButton} ${styles.ctaButtonTop}`} onClick={onButtonClick}>

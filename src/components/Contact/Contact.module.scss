@@ -60,10 +60,12 @@
 }
 
 .title {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin: 0 0 30px;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 64px;
+    margin: 0 0 20px;
+    letter-spacing: -1px;
+    font-family: var(--font-futura);
 
     @media (max-width: 768px) {
         font-size: 1.5rem;
@@ -71,12 +73,13 @@
 }
 
 .description {
-    width: 90%;
+    width: 80%;
 
     font-size: 1.05rem;
     font-weight: 400;
     color: #FFFFFF6e;
     line-height: 1.6;
+    font-family: var(--font-futura);
 
     @media (max-width: 768px) {
         font-size: 0.9rem;
@@ -100,8 +103,8 @@
         background-color: var(--primary-orange);
 
         position: absolute;
-        top: -25%;
-        left: -25%;
+        top: -45%;
+        left: -45%;
         transform: translateX(-50%, -50%);
         background: radial-gradient(ellipse at center,
                 rgba(255, 140, 0, 0.35) 0%,
@@ -121,7 +124,7 @@
 
 .formCard {
     background: #1a1a1a;
-    padding: 40px;
+    padding: 36px;
     border-radius: 12px;
     width: 100%;
     max-width: 450px;
@@ -133,12 +136,14 @@
     h3 {
         font-size: 1.2rem;
         margin-bottom: 8px;
+        font-family: var(--font-futura);
     }
 
     p {
         font-size: 0.9rem;
         color: #888;
         margin-bottom: 24px;
+        font-family: var(--font-futura);
 
         span {
             color: #fff;
@@ -208,4 +213,17 @@
     &:hover {
         background-color: darken(#ff6b00, 5%); // Assuming orange is somewhat like this
     }
+}
+
+.formCardTitle {
+    font-size: 28px !important;
+    font-weight: 600;
+    font-family: var(--font-futura);
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.formDesc {
+    font-size: 15px !important;
+    font-weight: 400;
 }

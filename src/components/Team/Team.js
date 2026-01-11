@@ -15,23 +15,23 @@ const Team = () => {
         },
         {
             role: "CEO",
-            image: null, 
-            bgColor: "#E5E5E5" 
-        },
-        {
-            role: "CFO",
-            image: null,
-            bgColor: "#E5E5E5"
+            image: require('@/assets/images/experts/ceo.png'), 
+            bgColor: "#FFCED2" 
         },
         {
             role: "CHRO",
             image: null,
-            bgColor: "#E5E5E5"
+            bgColor: "#FF8C78"
+        },
+        {
+            role: "Operation Head",
+            image: require('@/assets/images/experts/vp.png'),
+            bgColor: "#FFEFB6"
         },
         {
             role: "CFO",
             image: null,
-            bgColor: "#E5E5E5"
+            bgColor: "#C7F1FA"
         }
     ];
 

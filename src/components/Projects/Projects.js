@@ -11,7 +11,7 @@ const Projects = () => {
     const [activeCategory, setActiveCategory] = useState('All');
 
     const statuses = [];
-    const categories = ['Ongoing', 'Completed', 'Civil, PEB, Interior & MEP Works', 'EPC Contracts', 'Civil Engineering', 'EPC Pre-Engineered Building', 'MEP'];
+    const categories = ['On-going', 'Completed', 'Civil, PEB, Interior & MEP Works', 'EPC Contracts', 'Civil Engineering', 'EPC Pre-Engineered Building', 'MEP'];
 
     // Dummy data for projects
     const projects = [
@@ -92,6 +92,7 @@ const Projects = () => {
                     onButtonClick={() => {}}
                     align="left"
                     customChildren={<Filters />}
+                    maxWidth='60%'
                 />
 
                 <div className={styles.projectsGrid}>

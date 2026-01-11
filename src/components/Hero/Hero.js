@@ -4,11 +4,15 @@ import { ArrowRight, X } from 'lucide-react';
 import styles from './Hero.module.scss';
 
 import NeoLogo from '@/assets/images/verticals/neo_studio.png'
+import ApLogo from '@/assets/images/verticals/AP_logo.png'
+import ARLogo from '@/assets/images/verticals/AR_logo.png'
+import ArulGroupLogo from '@/assets/images/verticals/ArulGroup_logo.png'
 import Image from 'next/image';
 
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            <div className={styles.overlayContainer}></div>
             <div className={styles.overlay}>
                 <video
                     src="/videos/intro.mp4"
@@ -49,35 +53,36 @@ const Hero = () => {
                         <Image
                             src={NeoLogo}
                             alt=""
-                            width={300}
-                            heigth={300}
+                            width={1000}
+                            heigth={1000}
                             className={styles.verticalItemImage}
                         />
                     </div>
                     <div className={styles.verticalItem}>
                         <Image
-                            src={NeoLogo}
+                            src={ApLogo}
                             alt=""
-                            width={300}
-                            heigth={300}
+                            width={1000}
+                            heigth={1000}
                             className={styles.verticalItemImage}
                         />
                     </div>
                     <div className={styles.verticalItem}>
                         <Image
-                            src={NeoLogo}
+                            src={ARLogo}
                             alt=""
-                            width={300}
-                            heigth={300}
+                            width={1000}
+                            heigth={1000}
                             className={styles.verticalItemImage}
                         />
                     </div>
                     <div className={styles.verticalItem}>
                         <Image
-                            src={NeoLogo}
+                            src={ArulGroupLogo}
                             alt=""
-                            width={300}
-                            heigth={300}
+                            width={1000}
+                            heigth={1000}
+                            style={{background:"#fff"}}
                             className={styles.verticalItemImage}
                         />
                     </div>
