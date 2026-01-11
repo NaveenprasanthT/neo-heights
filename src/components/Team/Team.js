@@ -37,16 +37,25 @@ const Team = () => {
 
     // Dummy avatars for the "350+ Experts" badge
     const expertAvatars = [
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64",
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64",
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64"
+         {
+            id:1,
+            image: require('@/assets/images/experts/arul.png'),
+        },
+          {
+            id:2,
+            image: require('@/assets/images/experts/ceo.png'),
+        },
+          {
+            id:3,
+            image: require('@/assets/images/experts/vp.png'),
+        },
     ];
 
     const ExpertsBadge = () => (
         <div className={styles.expertsBadge}>
             <div className={styles.avatarGroup}>
                 {expertAvatars.map((src, i) => (
-                    <img key={i} src={src} alt="Expert" className={styles.expertAvatar} />
+                    <Image key={i} src={src.image} alt="Expert" className={styles.expertAvatar} width={1000} height={1000}/>
                 ))}
             </div>
             <span className={styles.expertText}>
