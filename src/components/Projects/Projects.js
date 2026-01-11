@@ -92,7 +92,7 @@ const Projects = () => {
                     onButtonClick={() => {}}
                     align="left"
                     customChildren={<Filters />}
-                    maxWidth='60%'
+                    // maxWidth='60%'
                 />
 
                 <div className={styles.projectsGrid}>

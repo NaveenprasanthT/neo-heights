@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} id="home">
             <div className={styles.overlayContainer}></div>
             <div className={styles.overlay}>
                 <video

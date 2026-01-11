@@ -62,4 +62,9 @@
     // Filter to make them white/grayscale if needed?
     // Screenshot shows colored logos (Wistron is teal, Volvo blue, etc).
     // So no filter.
+
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 40px;
+    }
 };
