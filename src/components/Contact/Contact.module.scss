@@ -65,7 +65,8 @@
     // line-height: 64px;
     margin: 0 0 20px;
     letter-spacing: -1px;
-    font-family: var(--font-futura);
+    font-family: var(--font-fustat);
+    line-height: 1.1;
 
     @media (max-width: 768px) {
         font-size: 1.5rem;
@@ -79,7 +80,7 @@
     font-weight: 400;
     color: #FFFFFF6e;
     line-height: 1.6;
-    font-family: var(--font-futura);
+    font-family: var(--font-fustat);
 
     @media (max-width: 768px) {
         font-size: 0.9rem;
@@ -136,14 +137,14 @@
     h3 {
         font-size: 1.2rem;
         margin-bottom: 8px;
-        font-family: var(--font-futura);
+        font-family: var(--font-fustat);
     }
 
     p {
         font-size: 0.9rem;
         color: #888;
         margin-bottom: 24px;
-        font-family: var(--font-futura);
+        font-family: var(--font-fustat);
 
         span {
             color: #fff;
@@ -218,7 +219,7 @@
 .formCardTitle {
     font-size: 28px !important;
     font-weight: 600;
-    font-family: var(--font-futura);
+    font-family: var(--font-fustat);
     line-height: 100%;
     letter-spacing: -2%;
 }

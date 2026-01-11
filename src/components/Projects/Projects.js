@@ -17,7 +17,7 @@ const Projects = () => {
     const projects = [
         {
             title: "SHIMIZU - SAKATA",
-            location: "GIDC, AHMADABAD",
+            location: "DODDABLLAPURA",
             image: require('@/assets/images/projects/sakata.png'),
             size: "large"
         },
@@ -28,16 +28,16 @@ const Projects = () => {
             size: "small"
         },
         {
-            title: "Schaeffler India Limited",
+            title: "Schaeffler India Limited, Shoolagiri",
             location: "SAVLI, VADODARA",
-            description: "Construction of 18000 boundary wall including civil foundation, RCC, fencing.",
+            description: "Construction of Hall 01 Boundary Wall, including civil foundation, RCC flooring.",
             image: require('@/assets/images/projects/sakata.png'),
             size: "medium-text", // Special type for text + image split
             isFeatured: true
         },
         {
             title: "SCHAEFFLER INDIA LIMITED",
-            location: "TAMIL NADU",
+            location: "SHOOLAGIRI",
             image: require('@/assets/images/projects/india.png'),
             size: "large-wide"
         },
@@ -49,7 +49,7 @@ const Projects = () => {
         },
         {
             title: "PEB WORKS VOLVO",
-            location: "KANCHEEPURAM",
+            location: "NARSAPURA",
             image: require('@/assets/images/projects/volvo.png'),
             size: "small"
         }
@@ -150,8 +150,7 @@ const Projects = () => {
                     </div>
                     <div className={`${styles.textCard} ${styles.span1} ${styles.darkTextCard}`}>
                          <p className={styles.finalCardText}>
-                             Executed as a turnkey EPC project, this facility integrates civil, structural, PEB, and MEP works to deliver a seamless, efficient, and future-ready industrial space tailored to client requirements.
-                         </p>
+Executed as a turnkey EPC project, this facility integrates civil, structural, PEB, and MEP works to deliver a seamless, efficient, and future-ready industrial space tailored to client requirements.                         </p>
                          <button className={styles.viewMoreBtn}>
                             Learn More <ArrowRight size={14} />
                         </button>
