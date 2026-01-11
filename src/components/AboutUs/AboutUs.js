@@ -54,7 +54,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="aboutUs">
       <SectionText 
         smallTitle="ABOUT US"
         title="Building Excellence Beyond Boundaries and Defying Limits"

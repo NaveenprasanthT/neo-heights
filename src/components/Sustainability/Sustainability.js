@@ -6,7 +6,7 @@ import styles from './Sustainability.module.scss';
 
 const Sustainability = () => {
     return (
-        <section className={styles.sustainabilitySection}>
+        <section className={styles.sustainabilitySection} id="sustainability">
             <div className={styles.overlay}></div>
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>

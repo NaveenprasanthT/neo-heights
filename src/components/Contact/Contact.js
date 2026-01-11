@@ -9,7 +9,7 @@ import ContactBg from '@/assets/images/contact_bg.png';
 
 const Contact = () => {
     return (
-        <section className={styles.contactSection}>
+        <section className={styles.contactSection} id="contactUs">
             <Image
                 src={ContactBg}
                 className={styles.contactSectionBg}

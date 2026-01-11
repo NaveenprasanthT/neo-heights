@@ -83,7 +83,7 @@ const Projects = () => {
     );
 
     return (
-        <section className={styles.projectsSection}>
+        <section className={styles.projectsSection} id="projects">
             <div className={`container ${styles.container}`}>
                 <SectionText 
                     smallTitle="PROJECTS"

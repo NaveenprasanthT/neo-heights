@@ -16,14 +16,31 @@ const Header = () => {
 
     const navItems = [
         { label: 'Home', href: '/' },
-        { label: 'About us', href: '/' },
-        { label: 'Projects', href: '/', hasDropdown: true },
-        { label: 'Services', href: '/', hasDropdown: true },
-        { label: 'Sustainability', href: '/', hasDropdown: true },
-        { label: 'Newsroom', href: '/' },
-        { label: 'Team', href: '/', hasDropdown: true },
-        { label: 'Contact', href: '/' },
+        { label: 'About us', href: '/', id: 'aboutUs' },
+        { label: 'Projects', href: '/', hasDropdown: false, id: 'projects' },
+        { label: 'Services', href: '/', hasDropdown: false, id: 'services' },
+        { label: 'Sustainability', href: '/', hasDropdown: false, id: 'sustainability' },
+        // { label: 'Newsroom', href: '/' },
+        { label: 'Team', href: '/', hasDropdown: false, id: 'team' },
+        { label: 'Contact', href: '/', id: 'contactUs' },
     ];
+
+    const scrollToSection = (id) => {
+        setIsMenuOpen(false); // For mobile screens, close the navbar while clicking navbar element
+        const element = document.getElementById(id);
+        if (!element) return;
+
+        const offset = 120; // navbar height
+        const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <header className={styles.header}>
@@ -35,11 +52,11 @@ const Header = () => {
                 <nav className={`${styles.nav} ${isMenuOpen ? styles.mobileOpen : ''}`}>
                     <ul className={styles.navList}>
                         {navItems.map((item) => (
-                            <li key={item.label} className={styles.navItem}>
-                                <Link href={item.href} className={styles.navLink}>
-                                    {item.label}
-                                    {item.hasDropdown && <ChevronDown size={14} className={styles.dropdownIcon} />}
-                                </Link>
+                            <li key={item.label} className={styles.navItem} onClick={() => scrollToSection(item?.id)}>
+                                {/* <Link href={item.href} className={styles.navLink}> */}
+                                {item.label}
+                                {item.hasDropdown && <ChevronDown size={14} className={styles.dropdownIcon} />}
+                                {/* </Link> */}
                             </li>
                         ))}
                     </ul>

@@ -56,7 +56,7 @@ const Team = () => {
     );
 
     return (
-        <section className={styles.teamSection}>
+        <section className={styles.teamSection} id="team">
             <div className={`container ${styles.container}`}>
                 <SectionText 
                     smallTitle="OUR TEAM"

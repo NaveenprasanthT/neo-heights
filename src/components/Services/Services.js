@@ -42,7 +42,7 @@ const Services = () => {
     const scrollItems = [...services, ...services];
 
     return (
-        <section className={styles.servicesSection}>
+        <section className={styles.servicesSection} id="services">
             <div className={`container ${styles.container}`}>
                 <SectionText 
                     smallTitle="OUR SERVICES"
