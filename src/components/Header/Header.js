@@ -15,7 +15,7 @@ const Header = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     const navItems = [
-        { label: 'Home', href: '/' },
+        { label: 'Home', href: '/', id: 'home' },
         { label: 'About us', href: '/', id: 'aboutUs' },
         { label: 'Projects', href: '/', hasDropdown: false, id: 'projects' },
         { label: 'Services', href: '/', hasDropdown: false, id: 'services' },

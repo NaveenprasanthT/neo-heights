@@ -13,6 +13,17 @@ import logo9 from "@/assets/images/trustedPartners/img9.png";
 import logo10 from "@/assets/images/trustedPartners/img10.png";
 import logo11 from "@/assets/images/trustedPartners/img11.png";
 import logo12 from "@/assets/images/trustedPartners/img12.png";
+import logo13 from "@/assets/images/trustedPartners/img13.png";
+import logo14 from "@/assets/images/trustedPartners/img14.png";
+import logo15 from "@/assets/images/trustedPartners/img15.png";
+import logo16 from "@/assets/images/trustedPartners/img16.png";
+import logo17 from "@/assets/images/trustedPartners/img17.png";
+import logo18 from "@/assets/images/trustedPartners/img18.png";
+import logo19 from "@/assets/images/trustedPartners/img19.png";
+import logo20 from "@/assets/images/trustedPartners/img20.png";
+import logo21 from "@/assets/images/trustedPartners/img21.png";
+import logo22 from "@/assets/images/trustedPartners/img22.png";
+import logo23 from "@/assets/images/trustedPartners/img23.png";
 
 const TrustedBy = () => {
   const logos = [
@@ -28,6 +39,17 @@ const TrustedBy = () => {
     { src: logo10, alt: "Ashok Leyland" },
     { src: logo11, alt: "Ashok Leyland" },
     { src: logo12, alt: "Ashok Leyland" },
+    { src: logo13, alt: "Ashok Leyland" },
+    { src: logo14, alt: "Ashok Leyland" },
+    { src: logo15, alt: "Ashok Leyland" },
+    { src: logo16, alt: "Ashok Leyland" },
+    { src: logo17, alt: "Ashok Leyland" },
+    { src: logo18, alt: "Ashok Leyland" },
+    { src: logo19, alt: "Ashok Leyland" },
+    { src: logo20, alt: "Ashok Leyland" },
+    { src: logo21, alt: "Ashok Leyland" },
+    { src: logo22, alt: "Ashok Leyland" },
+    { src: logo23, alt: "Ashok Leyland" },
   ];
 
   return (
@@ -36,7 +58,7 @@ const TrustedBy = () => {
 
       <div className={styles.slider}>
         <div className={styles.slideTrack}>
-          {[...logos, ...logos].map((logo, index) => (
+          {logos.map((logo, index) => (
             <div key={index} className={styles.slide}>
               <Image
                 src={logo.src}
