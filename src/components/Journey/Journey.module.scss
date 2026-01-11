@@ -2,6 +2,10 @@
   padding: 100px 7%;
   background-color: #121212;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 8% 6%;
+  }
 }
 
 .container {
@@ -43,6 +47,10 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--grey-2-color);
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 }
 
 .mainTitle {
@@ -52,7 +60,9 @@
   font-size: 6.5rem;
 
   @media (max-width: 768px) {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 0.825;
+    margin: 0 0 28px;
   }
 }
 
@@ -131,14 +141,24 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 }
 
 .featureDesc {
   font-size: 0.85rem;
   color: #FFFFFF4e;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
 }
 
 .ctaRow {
+  display: none; // Hide for all view ( as of now )
   margin-top: 24px;
 }
 
@@ -169,6 +189,10 @@
   overflow: hidden;
   background: #1a1a1a;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    border-radius: 4px;
+  }
 }
 
 .video {
@@ -178,14 +202,6 @@
   background: #000;
 
   object-fit: cover;
-
-  @media (max-width: 992px) {
-    height: 320px;
-  }
-
-  @media (max-width: 576px) {
-    height: 240px;
-  }
 }
 
 .videoOverlayTitle {
