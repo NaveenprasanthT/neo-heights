@@ -33,8 +33,8 @@ const Contact = () => {
                 <div className={styles.formWrapper}>
                     <div className={styles.absoluteBgColor}></div>
                     <div className={styles.formCard}>
-                        <h3>Let's connect</h3>
-                        <p>You can reach us anytime via <span> support@neoheigths.in</span></p>
+                        <h3 className={styles.formCardTitle}>Let's connect</h3>
+                        <p className={styles.formDesc}>You can reach us anytime via <span>frontdesk@neoheights.com</span></p>
 
                         <form className={styles.contactForm}>
                             <input type="text" placeholder="Your full Name" className={styles.input} />

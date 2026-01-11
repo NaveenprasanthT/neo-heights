@@ -60,7 +60,7 @@
 
 .bottomSection {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 2fr 1fr;
   gap: 40px;
 
   @media (max-width: 992px) {
@@ -145,6 +145,35 @@
   }
 }
 
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sectionContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.addressContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.addressContainer {
+  display: flex;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.address{
+  padding-left: 20px;
+}
+
 .socialIcons {
   display: flex;
   gap: 12px;
@@ -152,6 +181,14 @@
   a {
     color: #888;
     transition: color 0.2s;
+    border: 1px solid #fff;
+    width: 50px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       color: #fff;

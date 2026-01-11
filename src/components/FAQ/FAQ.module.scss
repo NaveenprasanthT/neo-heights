@@ -97,15 +97,24 @@
     max-width: 600px;
     width: 100%;
     border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 46px;
         margin-bottom: 12px;
+        font-weight: 500;
+        line-height: 56px;
+        font-family: var(--font-futura);
     }
 
     p {
         color: #888;
         margin-bottom: 24px;
+        font-size: 16px;
+        font-family: var(--font-futura);
     }
 
     .ctaBtn {
@@ -114,8 +123,14 @@
         border: none;
         padding: 10px 24px;
         border-radius: 6px;
-        font-weight: 600;
+        font-weight: 500;
+        font-family: var(--font-futura);
+        line-height: 24px;
+        font-size: 16px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
 
         &:hover {
             background-color: darken(#ff6b00, 5%);

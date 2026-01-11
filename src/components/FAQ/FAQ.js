@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import SectionText from '../SectionText/SectionText';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './FAQ.module.scss';
 
 const FAQ = () => {
@@ -61,9 +61,9 @@ const FAQ = () => {
 
                 <div className={styles.bottomCta}>
                     <div className={styles.ctaCard}>
-                        <h3>Your Trusted Construction Partner</h3>
-                        <p>We bring expertise, quality, and commitment to every project we undertake.</p>
-                        <button className={styles.ctaBtn}>Get Started</button>
+                        <h3>Your Trusted <br /> Construction Partner</h3>
+                        <p>Whether it’s a new build or renovation, we manage your project with <br /> transparency, efficiency, and uncompromising standards.</p>
+                        <button className={styles.ctaBtn}>Start Your Project <ArrowRight size={16} /></button>
                     </div>
                 </div>
             </div>
