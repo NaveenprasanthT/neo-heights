@@ -110,17 +110,27 @@
 .cardFooter {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 12px; // Slight padding from edges
     background-color: #1B1A1A;
     border-radius: 16px;
     
-    .role {
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: 0.5px;
+    .cardFooterDetails {
+        .name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        
+        .role {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.5px;
+
+            color: var(--primary-orange);
+        }
     }
 
     .arrowIcon {

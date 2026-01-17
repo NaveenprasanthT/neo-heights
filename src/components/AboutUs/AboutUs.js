@@ -45,7 +45,7 @@ const AboutUs = () => {
       description: "Widgets in one day boost operational efficiency.",
       category: "FORTUNE 500 COMPANY",
       subItems: ["Electrification", "Backend Development"],
-      image: require("@/assets/images/aboutUs/structural_design.jpg"),
+      image: require("@/assets/images/aboutUs/workforce.jpg"),
     }
   ];
 

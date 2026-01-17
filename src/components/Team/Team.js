@@ -9,22 +9,26 @@ import Image from 'next/image';
 const Team = () => {
     const teamMembers = [
         {
-            role: "MD",
+            name: 'Mr. Arul Vajravel',
+            role: "MD - Arul Group",
             image: require('@/assets/images/experts/arul.png'),
             bgColor: "#fff"
         },
         {
+            name: 'Mr. Dinakaran L',
             role: "CEO",
-            image: require('@/assets/images/experts/ceo.png'), 
-            bgColor: "#FFCED2" 
+            image: require('@/assets/images/experts/ceo.png'),
+            bgColor: "#FFCED2"
         },
         {
-            role: "CHRO",
-            image: null,
+            name: 'Mr Xavier',
+            role: "VP - Operations",
+            image: require('@/assets/images/experts/xavier.png'),
             bgColor: "#FF8C78"
         },
         {
-            role: "VP Business Development",
+            name: 'Mrs Monalisa',
+            role: "VP - Business Development",
             image: require('@/assets/images/experts/vp.png'),
             bgColor: "#FFEFB6"
         },
@@ -37,16 +41,16 @@ const Team = () => {
 
     // Dummy avatars for the "350+ Experts" badge
     const expertAvatars = [
-         {
-            id:1,
+        {
+            id: 1,
             image: require('@/assets/images/experts/arul.png'),
         },
-          {
-            id:2,
+        {
+            id: 2,
             image: require('@/assets/images/experts/ceo.png'),
         },
-          {
-            id:3,
+        {
+            id: 3,
             image: require('@/assets/images/experts/vp.png'),
         },
     ];
@@ -55,7 +59,7 @@ const Team = () => {
         <div className={styles.expertsBadge}>
             <div className={styles.avatarGroup}>
                 {expertAvatars.map((src, i) => (
-                    <Image key={i} src={src.image} alt="Expert" className={styles.expertAvatar} width={1000} height={1000}/>
+                    <Image key={i} src={src.image} alt="Expert" className={styles.expertAvatar} width={1000} height={1000} />
                 ))}
             </div>
             <span className={styles.expertText}>
@@ -67,7 +71,7 @@ const Team = () => {
     return (
         <section className={styles.teamSection} id="team">
             <div className={`container ${styles.container}`}>
-                <SectionText 
+                <SectionText
                     smallTitle="OUR TEAM"
                     title="Meet Our Experts"
                     description="At Neo Heights, we are at the forefront of industrial and commercial construction, dedicated to delivering top-notch quality while ensuring cost-efficiency. Our skilled team possesses the expertise to transform your vision into reality, completing projects on schedule and within your budget."
@@ -75,7 +79,7 @@ const Team = () => {
                     maxWidth="900px"
                     customChildren={<ExpertsBadge />}
                 />
-                
+
                 <div className={styles.teamGrid}>
                     {teamMembers.map((member, index) => (
                         <div key={index} className={styles.teamCard}>
@@ -85,7 +89,10 @@ const Team = () => {
                                 )}
                             </div>
                             <div className={styles.cardFooter}>
-                                <span className={styles.role}>{member.role}</span>
+                                <div className={styles.cardFooterDetails}>
+                                    <h3 className={styles.name}>{member?.name}</h3>
+                                    <span className={styles.role}>{member.role}</span>
+                                </div>
                                 <ArrowUpRight size={20} className={styles.arrowIcon} />
                             </div>
                         </div>

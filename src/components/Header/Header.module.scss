@@ -75,9 +75,7 @@
 .navItem {
   position: relative;
   cursor: pointer;
-}
 
-.navLink {
   font-size: 18px;
   font-family: var(--font-futura);
   font-weight: 500;
@@ -94,6 +92,24 @@
     opacity: 0.7;
   }
 }
+
+// .navLink {
+//   font-size: 18px;
+//   font-family: var(--font-futura);
+//   font-weight: 600;
+//   display: flex;
+//   align-items: center;
+//   gap: 4px;
+//   transition: color 0.2s;
+
+//   &:hover {
+//     color: var(--primary-orange);
+//   }
+
+//   .dropdownIcon {
+//     opacity: 0.7;
+//   }
+// }
 
 .actions {
   display: flex;

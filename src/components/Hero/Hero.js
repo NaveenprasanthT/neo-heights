@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, X } from 'lucide-react';
@@ -10,6 +12,23 @@ import ArulGroupLogo from '@/assets/images/verticals/ArulGroup_logo.png'
 import Image from 'next/image';
 
 const Hero = () => {
+
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (!element) return;
+
+        const offset = 120; // navbar height
+        const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <section className={styles.hero} id="home">
             <div className={styles.overlayContainer}></div>
@@ -33,12 +52,12 @@ const Hero = () => {
                         From initial design support to final delivery, our complete business model ensures excellence at every stage of the project lifecycle.
                     </p>
                     <div className={styles.ctaGroup}>
-                        <Link href="/start-project" className={`${styles.btn} ${styles.btnPrimary}`}>
+                        <span href="/start-project" className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => scrollToSection('contactUs')}>
                             Start Your Project <ArrowRight size={18} />
-                        </Link>
-                        <Link href="/projects" className={`${styles.btn} ${styles.btnSecondary}`}>
+                        </span>
+                        <span href="/projects" className={`${styles.btn} ${styles.btnSecondary}`} onClick={() => scrollToSection('contactUs')}>
                             View Projects
-                        </Link>
+                        </span>
                     </div>
                 </div>
             </div>
